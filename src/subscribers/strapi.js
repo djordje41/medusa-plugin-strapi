@@ -48,17 +48,17 @@ class StrapiSubscriber {
       await this.strapiService_.deleteRegionInStrapi(data)
     })
 
-    this.eventBus_.subscribe("product-category.created", async (data) => {
-      await this.strapiService_.createProductCategoryInStrapi(data.id)
-    })
-
-    this.eventBus_.subscribe("product-category.updated", async (data) => {
-      await this.strapiService_.updateProductCategoryInStrapi(data)
-    })
-
-    this.eventBus_.subscribe("product-category.deleted", async (data) => {
-      await this.strapiService_.deleteProductCategoryInStrapi(data)
-    })
+    // this.eventBus_.subscribe("product-category.created", async (data) => {
+    //   await this.strapiService_.createProductCategoryInStrapi(data.id)
+    // })
+    //
+    // this.eventBus_.subscribe("product-category.updated", async (data) => {
+    //   await this.strapiService_.updateProductCategoryInStrapi(data)
+    // })
+    //
+    // this.eventBus_.subscribe("product-category.deleted", async (data) => {
+    //   await this.strapiService_.deleteProductCategoryInStrapi(data)
+    // })
 
     this.eventBus_.subscribe("product-collection.products_added", async (data) => {
       await this.strapiService_.updateProductsWithinCollectionInStrapi(data)

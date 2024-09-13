@@ -1,6 +1,6 @@
 {
-  "name": "medusa-plugin-strapi",
-  "version": "1.0.10-dev",
+  "name": "djordje41-medusa-plugin-strapi",
+  "version": "1.0.11-dev",
   "description": "Strapi plugin for Medusa Commerce",
   "main": "index.js",
   "keywords": [
