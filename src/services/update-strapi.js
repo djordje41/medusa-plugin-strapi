@@ -184,7 +184,7 @@ class UpdateStrapiService extends BaseService {
           variantId,
           variant
         );
-        console.log("Product Variant Strapi Id - ", response);
+        console.log("Product Variant Strapi Id - ", response?.id);
         return response;
       }
     } catch (error) {
@@ -245,7 +245,7 @@ class UpdateStrapiService extends BaseService {
     ]
 
     // check if update contains any fields in Strapi to minimize runs
-    const found = data.fields.find((f) => updateFields.includes(f))
+    const found = data.fields?.find((f) => updateFields.includes(f))
     if (!found) {
       return
     }
@@ -315,7 +315,7 @@ class UpdateStrapiService extends BaseService {
     ]
 
     // check if update contains any fields in Strapi to minimize runs
-    const found = data.fields.find((f) => updateFields.includes(f))
+    const found = data.fields?.find((f) => updateFields.includes(f))
     if (!found) {
       return Promise.resolve()
     }
@@ -424,7 +424,7 @@ class UpdateStrapiService extends BaseService {
       const variant = await this.productVariantService_.retrieve(data.id, {
         relations: ["prices", "options"],
       })
-      console.log(variant)
+      // console.log(variant)
 
       if (variant) {
         // Update entry in Strapi
