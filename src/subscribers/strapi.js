@@ -19,13 +19,13 @@ class StrapiSubscriber {
       await this.strapiService_.updateRegionInStrapi(data)
     })
 
-    this.eventBus_.subscribe("product-variant.created", async (data) => {
-      await this.strapiService_.createProductVariantInStrapi(data.id)
-    })
+    // this.eventBus_.subscribe("product-variant.created", async (data) => {
+    //   await this.strapiService_.createProductVariantInStrapi(data.id)
+    // })
 
-    this.eventBus_.subscribe("product-variant.updated", async (data) => {
-      await this.strapiService_.updateProductVariantInStrapi(data)
-    })
+    // this.eventBus_.subscribe("product-variant.updated", async (data) => {
+    //   await this.strapiService_.updateProductVariantInStrapi(data)
+    // })
 
     this.eventBus_.subscribe("product.updated", async (data) => {
       await this.strapiService_.updateProductInStrapi(data)
@@ -39,9 +39,9 @@ class StrapiSubscriber {
       await this.strapiService_.deleteProductInStrapi(data)
     })
 
-    this.eventBus_.subscribe("product-variant.deleted", async (data) => {
-      await this.strapiService_.deleteProductVariantInStrapi(data)
-    })
+    // this.eventBus_.subscribe("product-variant.deleted", async (data) => {
+    //   await this.strapiService_.deleteProductVariantInStrapi(data)
+    // })
 
     // Blocker - Delete Region API
     this.eventBus_.subscribe("region.deleted", async (data) => {
